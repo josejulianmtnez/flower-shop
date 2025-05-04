@@ -1,0 +1,40 @@
+---
+import UserIcon from '../components/icons/User.astro';
+import Bag from '../components/icons/Bag.astro';
+import SearchIcon from '../components/icons/Search.astro';
+---
+
+<header class="flex items-center justify-between px-6 py-4 w-full">
+    <div class="flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
+        <img src="/logo.png" alt="Clowrs Logo" class="w-70 h-40 mb-2" />
+        <nav class="flex space-x-4 items-center justify-center">
+            <ul class="flex space-x-4 text-lg font-semibold">
+                <li><a href="/">Inicio</a><span class="mx-2">|</span></li>
+                <li><a href="/flowers">Flores</a><span class="mx-2">|</span></li>
+                <li><a href="/ocassions">Ocasiones</a><span class="mx-2">|</span></li>
+                <li><a href="/bouqutes">Ramos</a><span class="mx-2">|</span></li>
+                <li><a href="/floral-baskets">Cestas Florales</a><span class="mx-2">|</span></li>
+                <li><a href="/flower-vases">Jarron de Flores</a><span class="mx-2">|</span></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="flex items-center space-x-4 mb-15">
+        <a href="">
+            <Bag class="size-6" />
+        </a>
+        <a href="">
+            <UserIcon class="size-6" />
+        </a>
+        <a href="">
+            <SearchIcon class="size-6" />
+        </a>
+    </div>
+
+</header>
+
+<style>
+    a {
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+</style>
