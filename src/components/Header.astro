@@ -3,33 +3,31 @@ import UserIcon from '../components/icons/User.astro';
 import Bag from '../components/icons/Bag.astro';
 import SearchIcon from '../components/icons/Search.astro';
 ---
-
-<header class="flex items-center justify-between px-6 py-4 w-full">
+<header class="flex flex-col md:flex-row items-center justify-between px-6 py-4 w-full">
     <div class="flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
-        <img src="/logo.png" alt="Clowrs Logo" class="w-70 h-40 mb-2" />
-        <nav class="flex space-x-4 items-center justify-center">
-            <ul class="flex space-x-4 text-lg font-semibold">
-                <li><a class="hover:text-pink-600" href="/">Inicio</a><span class="mx-2">|</span></li>
-                <li><a class="hover:text-pink-600" href="/flowers">Flores</a><span class="mx-2">|</span></li>
-                <li><a class="hover:text-pink-600" href="/ocassions">Ocasiones</a><span class="mx-2">|</span></li>
-                <li><a class="hover:text-pink-600" href="/bouqutes">Ramos</a><span class="mx-2">|</span></li>
-                <li><a class="hover:text-pink-600" href="/floral-baskets">Cestas Florales</a><span class="mx-2">|</span></li>
+        <img src="/logo.png" alt="Clowrs Logo" class="w-40 h-20 md:w-70 md:h-40 mb-2" />
+        <nav class="flex flex-wrap space-x-2 md:space-x-4 items-center justify-center">
+            <ul class="flex flex-wrap space-x-2 md:space-x-4 text-sm md:text-lg font-semibold">
+                <li><a class="hover:text-pink-600" href="/">Inicio</a><span class="hidden md:inline mx-2">|</span></li>
+                <li><a class="hover:text-pink-600" href="/flowers">Flores</a><span class="hidden md:inline mx-2">|</span></li>
+                <li><a class="hover:text-pink-600" href="/ocassions">Ocasiones</a><span class="hidden md:inline mx-2">|</span></li>
+                <li><a class="hover:text-pink-600" href="/bouqutes">Ramos</a><span class="hidden md:inline mx-2">|</span></li>
+                <li><a class="hover:text-pink-600" href="/floral-baskets">Cestas Florales</a><span class="hidden md:inline mx-2">|</span></li>
                 <li><a class="hover:text-pink-600" href="/flower-vases">Jarron de Flores</a></li>
             </ul>
         </nav>
     </div>
-    <div class="flex items-center space-x-4 mb-15">
+    <div class="flex items-center space-x-2 md:space-x-4 mt-4 md:mt-0">
         <a href="">
-            <Bag class="size-6" />
+            <Bag class="size-5 md:size-6" />
         </a>
         <a href="">
-            <UserIcon class="size-6" />
+            <UserIcon class="size-5 md:size-6" />
         </a>
         <a href="">
-            <SearchIcon class="size-6" />
+            <SearchIcon class="size-5 md:size-6" />
         </a>
     </div>
-
 </header>
 
 <style>
