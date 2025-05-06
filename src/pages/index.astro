@@ -1,20 +1,73 @@
 ---
+import '@fontsource/khula';
+import '@fontsource-variable/cormorant-garamond';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Clowers" description="A simple and elegant flower shop website.">
-    <div class="flex items-center justify-start w-full px-118 mt-10">
-        <aside class="flex flex-col space-y-4">
-            <div class="w-45"><Card /></div>
-            <div class="w-45"><Card /></div>
-            <div class="w-45"><Card /></div>
-            <slot />
-        </aside>
-        <main class="ml-12">
-            <div class="w-[600px] h-[400px]">
-                <Card />
+<Layout title="Flowers" description="A simple and elegant flower shop website.">
+    <main class="px-4 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="flex gap-4">
+                <div class="flex flex-col space-y-4">
+                    <Card src="/image.png" class="w-45"/>
+                    <Card src="/image.png" class="w-45"/>
+                    <Card src="/image.png" class="w-45"/>
+                </div>
+                <div class="w-350">
+                    <Card src="/image.png" >
+                </div>
             </div>
-        </main>
-    </div>
+    
+            <div>
+                <h1 class="text-3xl text-center font-semibold text-gray-900 mb-4">Cormorant</h1>
+                <p class="text-sm text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                </p>
+    
+                <div class="border-t border-gray-300 pt-4 mb-6">
+                <h2 class="text-lg font-semibold text-pink-600">Detalles</h2>
+                <p class="text-sm">Dimensiones: <strong>20cm x 50cm</strong></p>
+                <p class="text-sm">Flores: <strong>15 margaritas, 20 lilies, 5 rosas</strong></p>
+                </div>
+    
+                <div class="flex items-center mb-4">
+                <span class="text-yellow-500 mr-2">★★★★★</span>
+                <span class="text-sm text-gray-600">5 Opiniones</span>
+                </div>
+    
+                <div class="text-2xl font-bold text-pink-600 mb-4">$850.90</div>
+    
+                <div class="flex items-center mb-6">
+                <button class="bg-gray-300 px-3 py-1 rounded-l text-lg">-</button>
+                <span class="px-4">1</span>
+                <button class="bg-gray-300 px-3 py-1 rounded-r text-lg">+</button>
+                </div>
+    
+                <div class="flex flex-col gap-3">
+                <button class="bg-white text-pink-600 border border-pink-500 py-2 rounded-full hover:bg-pink-50">
+                    Personalizar
+                </button>
+                <button class="bg-pink-500 text-white py-2 rounded-full hover:bg-pink-600">
+                    Comprar
+                </button>
+                </div>
+            </div>
+        </div>
+</main>
 </Layout>
+
+<style>
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    h2 {
+        font-family: 'Khula', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+</style>
